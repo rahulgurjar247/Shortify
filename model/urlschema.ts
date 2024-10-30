@@ -11,14 +11,13 @@ const urlSchema = new mongoose.Schema({
           required : true
      },
      userId: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "User",
-          require: true
+          type: String,
      },
+     clickCount : "number",
      createAt: {
           type: Date,
           default : Date.now
-     }
+     },
 })
 
 const Url = mongoose.models.Url || mongoose.model("Url", urlSchema)
